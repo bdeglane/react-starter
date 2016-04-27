@@ -1,0 +1,26 @@
+{
+  "name": "react-webpack-starter",
+  "description": "Simple starter for React and scss with webpack",
+  "main": "index.js",
+  "authors": [
+    "Benoît Deglane"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "webpack",
+    "starter",
+    "jquery",
+    "bootstrap"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower_components",
+    "test",
+    "tests"
+  ]
+}
