@@ -1,6 +1,6 @@
 /public/bower_components
 /dist/style/*
-/dist/js/*
+/dist/static/*
 .idea/*
 
 
