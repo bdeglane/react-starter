@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Simple starter for React and scss with webpack",
   "main": "index.js",
-  "url": "https://github.com/bdeglane/react-webpack-starter",
+  "url": "https://github.com/bdeglane/react-bootstrap-webpack-starter",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --progress --colors --watch",
