@@ -37,6 +37,7 @@
   },
   "dependencies": {
     "file-loader": "^0.8.5",
+    "gulp": "^3.9.1",
     "jquery": "^2.2.3",
     "url-loader": "^0.5.7"
   }
