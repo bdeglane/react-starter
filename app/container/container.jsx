@@ -3,7 +3,7 @@ import Hello from '../component/hello/Hello.jsx';
 import Item from '../component/Item/Item.jsx';
 import Card from '../component/card/Card.jsx';
 
-import img from '../../public/img/sample/sample.jpg';
+//import img from '../../public/img/sample/sample.jpg';
 
 
 /**
