@@ -49,20 +49,12 @@ module.exports = {
     plugins: [
         // Avoid publishing files when compilation fails
         //new webpack.NoErrorsPlugin(),
-        //new webpack.optimize.UglifyJsPlugin({
-        //    compress: {
-        //        warnings: false
-        //    }
-        //}),
         new ExtractTextPlugin('../style/style.css', {
             allChunks: true
         }),
         new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js')
     ],
     stats: {
-        // Nice colored output
         colors: true
-    },
-    // Create Sourcemaps for the bundle
-    devtool: 'source-map'
+    }
 };
