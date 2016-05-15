@@ -3,7 +3,7 @@ import Hello from '../component/hello/Hello.jsx';
 import Item from '../component/Item/Item.jsx';
 import Card from '../component/card/Card.jsx';
 
-import img from '../../public/img/sample/sample.jpg';
+//import img from '../../public/img/sample/sample.jpg';
 
 
 /**
@@ -38,16 +38,6 @@ export default class Container extends React.Component {
                 </div>
                 <div className="row">
                     <div className="col-sm-6 col-md-4">
-                        <Card img={img} title="Sample" text="Lorem ipsum"/>
-                    </div>
-                    <div className="col-sm-6 col-md-4">
-                        <Card img={img} title="Sample" text="Lorem ipsum"/>
-                    </div>
-                    <div className="col-sm-6 col-md-4">
-                        <Card img={img} title="Sample" text="Lorem ipsum"/>
-                    </div>
-                    <div className="col-sm-6 col-md-4">
-                        <Card img={img} title="Sample" text="Lorem ipsum"/>
                     </div>
                 </div>
             </div>
