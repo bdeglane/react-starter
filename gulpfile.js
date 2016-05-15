@@ -9,7 +9,7 @@ var path = require('path');
 //var dist = path.join(__dirname, 'dist', '/');
 var dist = path.join('./dist', '/');
 
-gulp.task('default', ['webpack-dev-server']);
+gulp.task('default', ['server']);
 // Build and watch cycle (another option for development)
 // Advantage: No server required, can run app from filesystem
 // Disadvantage: Requests are not blocked until bundle is available,
