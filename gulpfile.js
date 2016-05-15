@@ -4,6 +4,10 @@ var webpack = require('webpack');
 var WebpackDevServer = require('webpack-dev-server');
 var webpackConfig = require('./webpack.config.js');
 var webserver = require('gulp-webserver');
+var path = require('path');
+
+//var dist = path.join(__dirname, 'dist', '/');
+var dist = path.join('./dist', '/');
 
 gulp.task('default', ['webpack-dev-server']);
 // Build and watch cycle (another option for development)
@@ -57,32 +61,42 @@ gulp.task('webpack:build-dev', function(callback) {
 });
 
 // webpack-dev-server
+// Advantage: reload app in browser when change
+// Disadvantage: on windows, app doesn't rebuild, process 'build-dev' needed in
+//               a second terminal
 gulp.task('webpack-dev-server', function(callback) {
     // modify some webpack config options
     var myConfig = Object.create(webpackConfig);
-    myConfig.devtool = 'eval';
+    // myConfig.devtool = 'eval';
+    myConfig.devtool = 'sourcemap';
     myConfig.debug = true;
 
     // Start a webpack-dev-server
     new WebpackDevServer(webpack(myConfig), {
-        publicPath: '/' + myConfig.output.publicPath,
+        // publicPath: dist,
+        publicPath: myConfig.output.publicPath,
         stats: {
             colors: true
-        }
+        },
+        // watchOptions: {
+        //     aggregateTimeout: 300,
+        //     poll: 1000
+        // },
+        // hot: true
     }).listen(8080, 'localhost', function(err) {
         if (err) throw new gutil.PluginError('webpack-dev-server', err);
-        gutil.log('[webpack-dev-server]', 'http://localhost:8080/dist/index.html');
+        gutil.log('[webpack-dev-server]', 'http://localhost:8080/webpack-dev-server/dist/index.html');
     });
 });
 
 // simple webserver
-gulp.task('server',function(){
-  gulp.src('./')
-    .pipe(webserver({
-      livereload: true,
-      directoryListing: true,
-      open: 'http://localhost:8080/dist/index.html',
-      port: 8080,
-      fallback: '/dist/index.html'
-    }));
+gulp.task('server', function() {
+    gulp.src('./dist/')
+        .pipe(webserver({
+            livereload: false,
+            directoryListing: false,
+            open: 'http://localhost:8080/index.html',
+            port: 8080,
+            fallback: 'index.html'
+        }));
 });

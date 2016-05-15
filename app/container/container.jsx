@@ -38,16 +38,6 @@ export default class Container extends React.Component {
                 </div>
                 <div className="row">
                     <div className="col-sm-6 col-md-4">
-                        <Card img={img} title="Sample" text="Lorem ipsum"/>
-                    </div>
-                    <div className="col-sm-6 col-md-4">
-                        <Card img={img} title="Sample" text="Lorem ipsum"/>
-                    </div>
-                    <div className="col-sm-6 col-md-4">
-                        <Card img={img} title="Sample" text="Lorem ipsum"/>
-                    </div>
-                    <div className="col-sm-6 col-md-4">
-                        <Card img={img} title="Sample" text="Lorem ipsum"/>
                     </div>
                 </div>
             </div>
