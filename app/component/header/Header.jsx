@@ -12,18 +12,15 @@ const Header = () => {
                         <span className="icon-bar"></span>
                         <span className="icon-bar"></span>
                     </button>
-                    <a className="navbar-brand" href="#">React Bootstrap</a>
+                    <Link className="navbar-brand" to="/">React Bootstrap</Link>
                 </div>
                 <div id="navbar" className="collapse navbar-collapse">
                     <ul className="nav navbar-nav">
-                        <li className="active">
-                            <Link to="#">Home</Link>
+                        <li>
+                            <Link to="/" activeClassName="active">Home</Link>
                         </li>
                         <li>
-                            <Link to="#about">About</Link>
-                        </li>
-                        <li>
-                            <Link to="#contact">Contact</Link>
+                            <Link to="/chat" activeClassName="active">Chat</Link>
                         </li>
                     </ul>
                 </div>
