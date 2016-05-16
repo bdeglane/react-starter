@@ -1,8 +1,6 @@
 import React from 'react';
+import Header from '../component/header/Header.jsx';
 
-/**
- * A container is non-reusable and contain the model-view logic
- */
 export default class Container extends React.Component {
     constructor() {
         super();
@@ -12,10 +10,12 @@ export default class Container extends React.Component {
         return (
             <div className='main' id='main'>
                 <header>
-                    <h1>coucou</h1>
+                  <Header/>
                 </header>
                 <main>
+                  <div className='container-fluid'>
                     {this.props.children}
+                  </div>
                 </main>
             </div>
         )
