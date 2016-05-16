@@ -1,6 +1,8 @@
 import '../public/bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss';
 import '../style/style.scss';
 
+// import 'file?name=[name].[ext]!./index.html';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Container from './container/container.jsx';
