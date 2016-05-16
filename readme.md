@@ -1,4 +1,6 @@
-# React Webpack Starter
+# React Starter
+
+Simple starter for react, using gulp and and webpack.
 
 ## Requirements
 
