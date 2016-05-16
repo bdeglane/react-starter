@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router'
 import './item.scss';
 
 /**
@@ -12,7 +13,9 @@ import './item.scss';
 const Item = ({hello, url})=> {
     return (
         <li className="list-group-item">
-            <a className="card" href={ '/' + url + '#'}><span className="glyphicon glyphicon-heart" aria-hidden="true"></span> {hello}</a>
+            <Link to={ '/user/' + url } className="card">
+              <span className="glyphicon glyphicon-heart" aria-hidden="true"></span> {hello}
+            </Link>
         </li>
     );
 };

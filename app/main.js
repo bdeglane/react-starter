@@ -5,10 +5,25 @@ import '../style/style.scss';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Container from './container/container.jsx';
+import { Router, Route, browserHistory } from 'react-router'
 
-let hello = 'Name';
-let items = ['Roger', 'Simon', 'Françoise'];
+import Container from './container/container.jsx';
+import MainLayout from './container/MainLayout.jsx';
+import User from './component/user/User.jsx';
+
+// let hello = 'Name';
+// let items = ['Roger', 'Simon', 'Françoise'];
+
+// ReactDOM.render(
+//     <Container hello={hello} items={items}/>, document.getElementById('app'));
 
 ReactDOM.render(
-    <Container hello={hello} items={items}/>, document.getElementById('app'));
+  <Router history={browserHistory}>
+    <Route component={MainLayout}>
+      <Route path="/" component={Container}>
+        <Route path="user/:name" component={User}/>
+      </Route>
+    </Route>
+  </Router>
+  , document.getElementById('app')
+);

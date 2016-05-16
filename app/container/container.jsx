@@ -16,23 +16,24 @@ export default class Container extends React.Component {
 
     render() {
 
-        let items = this.props.items.map((item, id)=> {
-            return (
-                <Item key={ id } hello={ item } url={ item }/>
-            );
-        });
+        // let items = this.props.items.map((item, id)=> {
+        //     return (
+        //         <Item key={ id } hello={ item } url={ item }/>
+        //     );
+        // });
 
         return (
             <div className="container" id="container">
                 <div className="row">
                     <div className="col-md-12">
-                        <Hello hello={ this.props.hello }/>
+                        <Hello hello='coucou'/>
                     </div>
                 </div>
                 <div className="row">
                     <div className="col-md-12">
                         <ul className="list-group">
-                            { items }
+                            <Item key='1' hello='machin' url='machin'/>
+                            <Item key='2' hello='machine' url='machine'/>
                         </ul>
                     </div>
                 </div>
@@ -44,3 +45,6 @@ export default class Container extends React.Component {
         )
     }
 }
+/*
+<Hello hello={ this.props.hello }/>
+ */
