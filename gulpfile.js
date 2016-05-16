@@ -4,6 +4,7 @@ var webpack = require('webpack');
 var WebpackDevServer = require('webpack-dev-server');
 var webpackConfig = require('./webpack.config.js');
 var webserver = require('gulp-webserver');
+var mocha = require('gulp-mocha');
 var path = require('path');
 
 //var dist = path.join(__dirname, 'dist', '/');
@@ -99,4 +100,22 @@ gulp.task('server', function() {
             port: 8080,
             fallback: 'index.html'
         }));
+});
+
+// testing part
+gulp.task('test', ['mocha:single']);
+
+// run test for a single run
+gulp.task('mocha:single', function() {
+    return gulp.src(['./test/**/*.js'], {
+            read: false
+        })
+        .pipe(mocha({
+            reporter: 'list'
+        }));
+});
+
+// run test when files change
+gulp.task('mocha:watch', function() {
+    gulp.watch(['./app/**/*'], ['mocha:single']);
 });

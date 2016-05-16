@@ -5,7 +5,7 @@
   "main": "index.js",
   "url": "https://github.com/bdeglane/react-bootstrap-webpack-starter",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha",
     "install": "bower install",
     "postinstall": "gulp build"
   },
@@ -19,8 +19,10 @@
     "babel-preset-react": "^6.5.0",
     "babel-preset-stage-0": "^6.5.0",
     "babel-runtime": "^6.6.1",
+    "chai": "^3.5.0",
     "css-loader": "^0.23.1",
     "extract-text-webpack-plugin": "^1.0.1",
+    "gulp-mocha": "^2.2.0",
     "gulp-util": "^3.0.7",
     "gulp-webserver": "^0.9.1",
     "mocha": "^2.4.5",
