@@ -1,17 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import {Router, Route, browserHistory} from 'react-router';
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
 
-import {Provider} from 'react-redux'
-import {createStore} from 'redux'
-
-import MainLayout from './MainLayout.jsx';
-import Home from './page/Home.jsx';
-import Chat from './page/Chat.jsx';
+import MainContainer from './MainContainer.jsx';
 
 let store = createStore(() => {});
 
+/**
+ * App class wrap the application on redux provider
+ */
 export default class App {
     /**
      * Initial render
@@ -20,12 +19,8 @@ export default class App {
     render() {
         ReactDOM.render(
           <Provider store={store}>
-            <Router history={browserHistory}>
-                <Route component={MainLayout}>
-                    <Route path="/" component={Home}/>
-                    <Route path="/chat" component={Chat}/>
-                </Route>
-            </Router>
-        </Provider>, document.getElementById('app'));
-    }
+            <MainContainer />
+          </Provider>,
+          document.getElementById('app'));
+      }
 }
