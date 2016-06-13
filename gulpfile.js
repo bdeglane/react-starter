@@ -16,7 +16,7 @@ gulp.task('default', ['server']);
 // Disadvantage: Requests are not blocked until bundle is available,
 //               can serve an old app on refresh
 gulp.task('build-dev', ['webpack:build-dev'], function() {
-    gulp.watch(['app/**/*','style/**/*'], ['webpack:build-dev']);
+    gulp.watch(['app/**/*', 'style/**/*'], ['webpack:build-dev']);
 });
 
 // Production build
@@ -30,6 +30,10 @@ gulp.task('webpack:build', function(callback) {
             compress: {
                 warnings: false
             }
+        }));
+    productionConfig.plugins.push(
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': '"production"'
         }));
 
     webpack(productionConfig, function(err, stats) {
@@ -45,6 +49,10 @@ gulp.task('webpack:build', function(callback) {
 var myDevConfig = Object.create(webpackConfig);
 myDevConfig.devtool = 'sourcemap';
 myDevConfig.debug = true;
+myDevConfig.plugins.push(
+    new webpack.DefinePlugin({
+        'process.env.NODE_ENV': '"development"'
+    }));
 
 // create a single instance of the compiler to allow caching
 var devCompiler = webpack(myDevConfig);
