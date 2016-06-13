@@ -1,4 +1,7 @@
-import ReactBootstrap from './ReactBootstrap.jsx';
+import ReactRedux from './ReactRedux.js';
 
-let app = new ReactBootstrap();
+/*
+ * To Infinity & Beyond
+ */
+let app = new ReactRedux();
 app.render();
