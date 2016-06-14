@@ -21,7 +21,7 @@ Simple starter for react, using gulp and and webpack.
 
 Shorcut
 * ```gulp build``` build the production bundle
-* ```gulp build-dev``` build the development bundle and refresh it on every change in app directory
+* ```gulp build:dev``` build the development bundle and refresh it on every change in app directory
 * ```gulp server``` run a simple server on dist directory
 * ```gulp dev``` run test for a single run
 
