@@ -1,6 +1,7 @@
-//import '../public/bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss';
-import '../style/style.scss';
-import App from './container/App.js';
+import ReactRedux from './ReactRedux.js';
 
-let app = new App();
+/*
+ * To Infinity & Beyond
+ */
+let app = new ReactRedux();
 app.render();

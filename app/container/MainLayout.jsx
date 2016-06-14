@@ -6,16 +6,20 @@ export default class Container extends React.Component {
         super();
     }
 
+    /**
+    * Main layout of the application
+    * @return {HTMl}
+    */
     render() {
         return (
             <div className='main' id='main'>
                 <header>
-                  <Header/>
+                    <Header/>
                 </header>
-                <main>
-                  <div className='container-fluid'>
-                    {this.props.children}
-                  </div>
+                <main className='main' id='main'>
+                    <div className='container-fluid'>
+                        {this.props.children}
+                    </div>
                 </main>
             </div>
         )
