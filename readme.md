@@ -1,4 +1,5 @@
 # React Starter
+![notice](https://img.shields.io/badge/repo-deprecated-red.svg)
 
 Simple starter for react, using gulp and and webpack.
 
